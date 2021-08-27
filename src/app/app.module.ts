@@ -1,3 +1,5 @@
+import { AuthorService } from './author/author.service';
+import { CategoryService } from './category/category.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +20,10 @@ import { AuthorComponent } from './author/author.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CategoryService,
+    AuthorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
