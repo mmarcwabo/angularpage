@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe';
 import { AuthorService } from './author/author.service';
 import { CategoryService } from './category/category.service';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { AuthorComponent } from './author/author.component';
     AppComponent,
     BlogPostComponent,
     CategoryComponent,
-    AuthorComponent
+    AuthorComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
