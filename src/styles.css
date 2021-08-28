@@ -5,6 +5,7 @@
 body{
     padding: 11px;
 }
-.bi{
+.bi, .numberOfLikes{
     font-size: x-large;
+    font-weight: bolder;
 }
