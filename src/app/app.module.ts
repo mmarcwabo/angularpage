@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { CategoryComponent } from './category/category.component';
 import { AuthorComponent } from './author/author.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AuthorComponent } from './author/author.component';
     BlogPostComponent,
     CategoryComponent,
     AuthorComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
