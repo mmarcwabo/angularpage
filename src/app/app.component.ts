@@ -11,4 +11,6 @@ export class AppComponent {
     isLiked: false,
     likesCount:0
   };
+  //The default page/tab
+  viewMode = "map";
 }
