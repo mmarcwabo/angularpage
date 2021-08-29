@@ -1,1 +1,9 @@
-{{ content | summary:20 }}
+<div *ngIf="blogs.length>0; then blogList else noBlogs"></div>
+<ng-template #blogList>
+    <h2>List of blog posts</h2>
+    <br>
+    {{ content | summary:20 }}
+</ng-template>
+<ng-template #noBlogs>
+    <h2>No blog posts yet</h2>
+</ng-template>
