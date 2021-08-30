@@ -1,7 +1,13 @@
-<form action="">
+<h2>Get started with us</h2>
+<form>
     <div class="form-group">
-        <label for="firstName"></label>
-        <input id="firstName" type="text" class="form-control">
+        <label for="firstName">First Name</label>
+        <input required minlength ="3" pattern="marcellin" ngModel name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors?.required">First name is required</div>
+            <div *ngIf="firstName.errors?.minlength">First name is too short the minlength is {{ firstName.errors?.minlength.requiredLength }}</div>
+            <div *ngIf="firstName.errors?.pattern">First name does not match the pattern</div>
+        </div>
     </div>
     <div class="form-group">
         <label for="comment">Comment</label><textarea name="" id="comment" cols="30" rows="10" class="form-control">
