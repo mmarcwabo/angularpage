@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'new-course-form',
@@ -13,12 +14,20 @@ export class NewCourseFormComponent {
     { id: 3, name: 'Languages' },
   ];
 
+  form = new FormGroup(
+    {
+      topics: new FormArray(
+        []
+      )
+    }
+  );
+
   constructor() {
 
   }
 
   submit(course: any) {
-   console.log(course);
+    console.log(course);
   }
 
 
