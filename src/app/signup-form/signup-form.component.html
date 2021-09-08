@@ -1,6 +1,9 @@
 <h2>A simple Angular Login login/sign up form</h2>
 <form [formGroup]="form">
-    <div class="form-group">
+    <div class="form-group" (ngSubmit)="login()">
+        <div *ngIf="form?.errors" class="alert alert-danger">
+            The username or password is invalid.
+        </div>
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" formControlName="username">
         <div *ngIf="username?.pending">Checking for uniqueness...</div>
@@ -20,5 +23,5 @@
         </div>
     </div>
     <br/>
-    <button class="btn btn-primary" type="submit">Sign Up</button>
+    <input class="btn btn-primary" type="submit" value="Sing Up">
 </form>
